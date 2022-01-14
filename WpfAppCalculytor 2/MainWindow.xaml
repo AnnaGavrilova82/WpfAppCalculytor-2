@@ -1,0 +1,56 @@
+﻿<Window x:Class="WpfAppCalculytor_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppCalculytor_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="400"/>
+        </Grid.RowDefinitions>
+        <TextBox  
+            Grid.Row="0" 
+            Name="result" 
+            IsReadOnly="True"
+            FontSize="26" 
+            Background="#FF3AB0C3" 
+            HorizontalContentAlignment="Right" 
+            VerticalContentAlignment="Center" 
+            Padding="10" 
+            ScrollViewer.CanContentScroll="True" 
+            Margin="2" 
+            Grid.IsSharedSizeScope="True"/>
+        
+        <Grid Grid.Row="1">
+            <UniformGrid Rows="6" Columns="4">
+                <Button Content="%" FontSize="20" Name="btnPercent" Click="btn_operation_Click"/>
+                <Button Content="CE" FontSize="20" Name="btnCE" Click="btnCE_Click"/>
+                <Button Content="C" FontSize="20" Name="btnC" Click="btnC_Click"/>
+                <Button Content="←" FontSize="20" Name="btnDelete" Click="btnDelete_Click"/>
+                <Button Content="⅟×" FontSize="20" Name="btnFract" Click="btn_operation_Click"/>
+                <Button Content="x²" FontSize="20" Name="btnSqr" Click="btn_operation_Click"/>
+                <Button Content="√x" FontSize="20" Name="btnSqrt" Click="btn_operation_Click"/>
+                <Button Content="/" FontSize="20" Name="btnDivision" Click="btn_operation_Click"/> 
+                <Button Content="7" FontSize="20" Background="White" Click="Button_Click"/>
+                <Button Content="8" FontSize="20" Background="White" Click="Button_Click"/>
+                <Button Content="9" FontSize="20" Background="White" Click="Button_Click"/>
+                <Button Content="*" FontSize="20" Name="btnMultiplication" Click="btn_operation_Click"/>
+                <Button Content="4" FontSize="20" Background="White" Click="Button_Click"/>
+                <Button Content="5" FontSize="20" Background="White" Click="Button_Click"/>
+                <Button Content="6" FontSize="20" Background="White" Click="Button_Click"/>
+                <Button Content="-" FontSize="20" Name="btnMinus" Click="btn_operation_Click"/>
+                <Button Content="1" FontSize="20" Background="White" Click="Button_Click"/>
+                <Button Content="2" FontSize="20" Background="White" Click="Button_Click"/>
+                <Button Content="3" FontSize="20" Background="White" Click="Button_Click"/>
+                <Button Content="+" FontSize="20" Name="btnSumm" Click="btn_operation_Click"/>
+                <Button Content="+/-" FontSize="20" Background="White" Name="btnNegative" Click="btnNegative_Click"/>
+                <Button Content="0" FontSize="20" Background="White" Click="Button_Click"/>
+                <Button Content="," FontSize="20" Background="White" Name="btnComman" Click="btn_operation_Click"/>
+                <Button Content="=" FontSize="20" Name="Result" Click="Result_Click"/>
+            </UniformGrid>
+            </Grid>
+        </Grid>
+</Window>
